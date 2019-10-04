@@ -2,8 +2,7 @@
 
 // Scroll to the bottom of the list to use some advanced array methods to help the event director gather some information from the businesses.
 
-const runners = [
-  {
+const runners = [{
     id: 1,
     first_name: 'Charmain',
     last_name: 'Seiler',
@@ -458,7 +457,7 @@ const runners = [
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
 let fullNames = [];
-runners.forEach(function(object) {
+runners.forEach(function (object) {
   let name = object.first_name + ` ` + object.last_name;
   fullNames.push(name);
 });
@@ -496,7 +495,7 @@ console.log(ticketPriceTotal);
 
 // Problem 1 Returning a alphabetically ordered list of last names.
 let lastNames = [];
-runners.forEach(function(object) {
+runners.forEach(function (object) {
   let name = object.last_name;
   lastNames.push(name);
 });
