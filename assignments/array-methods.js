@@ -2,8 +2,7 @@
 
 // Scroll to the bottom of the list to use some advanced array methods to help the event director gather some information from the businesses.
 
-const runners = [
-  {
+const runners = [{
     id: 1,
     first_name: 'Charmain',
     last_name: 'Seiler',
@@ -458,11 +457,12 @@ const runners = [
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
 let fullNames = [];
-runners.forEach(function(object) {
+runners.forEach(function (object) {
   let name = object.first_name + ` ` + object.last_name;
   fullNames.push(name);
 });
 fullNames.sort();
+
 console.log(fullNames);
 
 // ==== Challenge 2: Use .map() ====
@@ -470,22 +470,21 @@ console.log(fullNames);
 let firstNamesAllCaps = [];
 firstNamesAllCaps = runners.map(item => item.first_name.toUpperCase());
 firstNamesAllCaps.sort();
+
 console.log(firstNamesAllCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
 let runnersLargeSizeShirt = [];
 runnersLargeSizeShirt = runners.filter(item => item.shirt_size === 'L');
-runnersLargeSizeShirt.sort();
+
 console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
 let ticketPriceTotal = 0;
-ticketPriceTotal = runners.reduce(
-  (tracker, item) => tracker + item.donation,
-  0
-);
+ticketPriceTotal = runners.reduce((tracker, item) => tracker + item.donation, 0);
+
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
