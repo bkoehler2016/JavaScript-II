@@ -30,10 +30,15 @@ const myCounter = counterMaker();
 // Example usage: const myCounter = counterMaker();
 console.log(myCounter()); // 1
 console.log(myCounter()); // 2
+console.log(myCounter()); // 3
+console.log(myCounter()); // 4
+
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
 // will refuse to go over the limit, and start back at 1.
+
+
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
 const counterFactory = () => {
@@ -50,4 +55,5 @@ const counterFactory = () => {
       return --decrement;
     }
   };
+
 };
