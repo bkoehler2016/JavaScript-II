@@ -478,7 +478,7 @@ console.log(firstNamesAllCaps);
 let runnersLargeSizeShirt = [];
 runnersLargeSizeShirt = runners.filter(item => item.shirt_size === 'L');
 
-console.log(JSON.stringify(runnersLargeSizeShirt, null, 2));
+console.log(JSON.stringify(runnersLargeSizeShirt, ['first_name', 'last_name', 'shirt_size', 'email'], 2));
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
