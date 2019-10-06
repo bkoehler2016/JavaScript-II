@@ -515,4 +515,4 @@ topDonators = runners
   .sort((a, b) => b.donation - a.donation)
   .map(item => `${item.first_name} ${item.last_name} - $${item.donation}`);
 
-console.log(topDonators);
+console.log(JSON.stringify(topDonators, null, 2));
