@@ -5,10 +5,10 @@
 // The outer scope can be a parent function, or the top level of the script.
 const name = 'Ben';
 
-function retrunName() {
+function returnName() {
   console.log(name);
 }
-retrunName();
+returnName();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
