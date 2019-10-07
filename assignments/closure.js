@@ -23,7 +23,12 @@ const counterMaker = () => {
   // 3- Return the `counter` function.
   let counterMaker = 0;
   return function () {
-    return ++counterMaker;
+    if (counterMaker < 3) {
+      return ++counterMaker;
+    } else {
+      counterMaker = 1;
+      return counterMaker;
+    }
   };
 };
 const myCounter = counterMaker();
@@ -31,7 +36,10 @@ const myCounter = counterMaker();
 console.log(myCounter()); // 1
 console.log(myCounter()); // 2
 console.log(myCounter()); // 3
-console.log(myCounter()); // 4
+console.log(myCounter()); // 1
+console.log(myCounter()); // 2
+
+
 
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
@@ -54,8 +62,8 @@ const counterFactory = () => {
 };
 
 const newCounterFactory = counterFactory();
-console.log(newCounterFactory.increment()); // 1
-console.log(newCounterFactory.increment()); // 2
-console.log(newCounterFactory.increment()); // 3
-console.log(newCounterFactory.decrement()); // 2
-console.log(newCounterFactory.decrement()); // 1
+console.log(`I increased the number ${newCounterFactory.increment()}`); // 1
+console.log(`I increased the number ${newCounterFactory.increment()}`); // 2
+console.log(`I increased the number ${newCounterFactory.increment()}`); // 3
+console.log(`I decreased the number ${newCounterFactory.increment()}`); // 2
+console.log(`I decressed the number ${newCounterFactory.increment()}`); // 1
