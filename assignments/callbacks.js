@@ -86,7 +86,7 @@ contains('Pencil', items, result => {
 
 /* STRETCH PROBLEM */
 
-let dupes = ["first", "last", "first", "second", "array", "last", "first", "function"];
+let dupes = ["first", "last", "first", "second", "array", "last", "first", "function", "second"];
 
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
