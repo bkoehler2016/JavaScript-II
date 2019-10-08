@@ -43,7 +43,7 @@ function getLength(arr, cb) {
   return cb(arr.length);
 }
 getLength(items, arrLength => {
-  console.log(arrLength);
+  console.log(`There are ${arrLength} items in the array`);
 });
 
 function last(arr, cb) {
@@ -51,7 +51,7 @@ function last(arr, cb) {
   return cb(arr[arr.length - 1]);
 }
 last(items, lastItem => {
-  console.log(lastItem);
+  console.log(`The last item is ${lastItem}`);
 });
 
 function sumNums(x, y, cb) {
