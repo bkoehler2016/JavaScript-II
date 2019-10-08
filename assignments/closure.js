@@ -65,5 +65,5 @@ const newCounterFactory = counterFactory();
 console.log(`I increased the number ${newCounterFactory.increment()}`); // 1
 console.log(`I increased the number ${newCounterFactory.increment()}`); // 2
 console.log(`I increased the number ${newCounterFactory.increment()}`); // 3
-console.log(`I decreased the number ${newCounterFactory.increment()}`); // 2
-console.log(`I decressed the number ${newCounterFactory.increment()}`); // 1
+console.log(`I decreased the number ${newCounterFactory.decrement()}`); // 2
+console.log(`I decressed the number ${newCounterFactory.decrement()}`); // 1
