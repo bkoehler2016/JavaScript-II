@@ -2,7 +2,8 @@
 
 // Scroll to the bottom of the list to use some advanced array methods to help the event director gather some information from the businesses.
 
-const runners = [{
+const runners = [
+  {
     id: 1,
     first_name: 'Charmain',
     last_name: 'Seiler',
@@ -457,8 +458,8 @@ const runners = [{
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
 let fullNames = [];
-runners.forEach(function (object) {
-  let name = object.first_name + ` ` + object.last_name;
+runners.forEach(function(object) {
+  let name = `${object.first_name} ${object.last_name}`;
   fullNames.push(name);
 });
 fullNames.sort();
@@ -478,8 +479,13 @@ console.log(firstNamesAllCaps);
 let runnersLargeSizeShirt = [];
 runnersLargeSizeShirt = runners.filter(item => item.shirt_size === 'L');
 
-console.log(JSON.stringify(runnersLargeSizeShirt, ['first_name', 'last_name', 'shirt_size', 'email'], 2));
-
+console.log(
+  JSON.stringify(
+    runnersLargeSizeShirt,
+    ['first_name', 'last_name', 'shirt_size', 'email'],
+    2
+  )
+);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
@@ -489,14 +495,16 @@ ticketPriceTotal = runners.reduce(
   0
 );
 
-console.log(`The total amount of the donations received is $${ticketPriceTotal}`);
+console.log(
+  `The total amount of the donations received is $${ticketPriceTotal}`
+);
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1 Returning a alphabetically ordered list of last names.
 let lastNames = [];
-runners.forEach(function (object) {
+runners.forEach(function(object) {
   let name = object.last_name;
   lastNames.push(name);
 });
